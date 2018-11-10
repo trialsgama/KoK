@@ -7,48 +7,78 @@
     tools:context=".Register">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Ingrese nombre"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="48dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="350dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="Ingrese correo electronico"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="110dp" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="347dp"
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword|textVisiblePassword"
-        android:text="Ingrese su password"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:hint="Ingrese nombre"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <EditText
+        android:id="@+id/Mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingrese correo electronico"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingrese su password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="288dp"
         android:layout_height="44dp"
         android:text="Aceptar terminos y condiciones"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="239dp" />
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="361dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registrarse"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="310dp" />
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="421dp" />
+
+    <EditText
+        android:id="@+id/Apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingrese apellido"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <EditText
+        android:id="@+id/Nac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingrese fecha de nacimiento"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingrese usuario"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
