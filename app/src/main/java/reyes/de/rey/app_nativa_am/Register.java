@@ -11,12 +11,12 @@ import reyes.de.rey.app_nativa_am.utilidades.Utilidades;
 
 public class Register extends AppCompatActivity {
 
-    private EditText usuario:
-    private EditText nombre:
-    private EditText apellido:
-    private EditText mail:
-    private EditText fec:
-    private EditText password:
+    private EditText usuario;
+    private EditText nombre;
+    private EditText apellido;
+    private EditText mail;
+    private EditText fec;
+    private EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
