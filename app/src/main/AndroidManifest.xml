@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ItemListActivity"
+            android:name=".Activities.Register"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,17 +19,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.Login" />
         <activity
-            android:name=".ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
+            android:name=".Activities.menuusuarioListActivity"
+            android:label="@string/title_menuusuario_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.menuusuarioDetailActivity"
+            android:label="@string/title_menuusuario_detail"
+            android:parentActivityName=".Activities.menuusuarioListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="reyes.de.rey.app_nativa_am.ItemListActivity" />
+                android:value="reyes.de.rey.app_nativa_am.Activities.menuusuarioListActivity" />
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>

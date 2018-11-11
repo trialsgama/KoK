@@ -1,4 +1,4 @@
-package reyes.de.rey.app_nativa_am;
+package reyes.de.rey.app_nativa_am.SQLite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,7 +8,7 @@ import reyes.de.rey.app_nativa_am.utilidades.Utilidades;
 
 public class Conexion_Sqlite extends SQLiteOpenHelper {
 
-    final  String Crear_Tabla_Usuario = " CREATE TABLE usuarios (usuario TEXT,nombre TEXT,apellido TEXT, fec TEXT,mail TEXT, password TEXT";
+    //final  String Crear_Tabla_Usuario = " CREATE TABLE usuarios (usuario TEXT,nombre TEXT,apellido TEXT, fec TEXT,mail TEXT, password TEXT";
 
     public Conexion_Sqlite(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -16,7 +16,7 @@ public class Conexion_Sqlite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.Crear_Tabla_Usuario);
+        db.execSQL(Utilidades.CREAR_TABLA_USUARIO);
     }
 
     @Override
