@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
 
 
         });
-        
+
 
     }// On Create
     private void verificarUsuario() {
