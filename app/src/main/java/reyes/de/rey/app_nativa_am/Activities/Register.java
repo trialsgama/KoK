@@ -42,6 +42,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrarUsuarios();
+                startActivity(new Intent(Register.this,menuusuarioDetailFragment.class));
                 }
             });
 

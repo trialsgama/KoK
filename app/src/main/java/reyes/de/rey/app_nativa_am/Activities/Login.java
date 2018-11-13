@@ -40,6 +40,15 @@ public class Login extends AppCompatActivity {
 
         });
 
+        registrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this,Register.class));
+            }
+        });
+
+
+
 
     }// On Create
     private void verificarUsuario() {
