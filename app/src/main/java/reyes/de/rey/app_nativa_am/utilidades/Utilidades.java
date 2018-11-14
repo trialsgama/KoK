@@ -18,8 +18,8 @@ public class Utilidades {
     public static final String campo_fecha = "fecha";
     public static final String campo_ciudad = "ciudad";
     public static final String campo_pais = "pais";
-
+    public static final String campo_usuario_momento= "usuario_momento";
     public static final String CREAR_TABLA_USUARIO = " CREATE TABLE " + crear_tabla + " ("+campo_usuario+" TEXT," + campo_nombre+ " TEXT," + campo_apellido + " TEXT," + campo_fec + " TEXT," + campo_mail + " TEXT," + campo_password + " TEXT)";
 
-    public static final String CREAR_TABLA_MOMENTOS = " CREATE TABLE" + crear_tabla_momento + " ("+campo_usuario+"TEXT," + campo_nota+ "TEXT," + campo_fecha + "TEXT," + campo_ciudad + "TEXT," + campo_pais + "TEXT," + campo_imagen + "TEXT)";
+    public static final String CREAR_TABLA_MOMENTOS = " CREATE TABLE" + crear_tabla_momento + " (" + campo_nota+ " TEXT," + campo_fecha + " TEXT," + campo_ciudad + " TEXT," + campo_pais + " TEXT," + campo_imagen + " TEXT , " +campo_usuario_momento+" TEXT, FOREIGN KEY (" + campo_usuario_momento + ") REFEREMCES usuarios(" + campo_usuario +"))";
 }

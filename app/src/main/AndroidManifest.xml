@@ -29,15 +29,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
              </intent-filter>
          </activity>
+
         <activity
             android:name=".Activities.menuusuarioListActivity"
             android:label="@string/title_menuusuario_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".Activities.menuusuarioDetailActivity"
+            android:name=".Activities.menuusuarioDetailFragme"
             android:label="@string/title_menuusuario_detail"
             android:parentActivityName=".Activities.menuusuarioListActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="reyes.de.rey.app_nativa_am.Activities.menuusuarioListActivity" />

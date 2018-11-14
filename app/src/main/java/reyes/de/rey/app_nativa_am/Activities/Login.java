@@ -29,13 +29,13 @@ public class Login extends AppCompatActivity {
         usuario = (EditText) findViewById(R.id.user);
         password = (EditText) findViewById(R.id.userpassword);
         login = (Button) findViewById(R.id.btn_login);
-        registrarse = (Button) findViewById(R.id.btn_register);
+        registrarse = (Button) findViewById(R.id.btn_registrarse);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 verificarUsuario();
-                startActivity(new Intent(Login.this,Register.class));
+                startActivity(new Intent(Login.this,menuusuarioDetailFragment.class));
             }
 
 
