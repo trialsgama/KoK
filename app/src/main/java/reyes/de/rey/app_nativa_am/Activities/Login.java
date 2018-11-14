@@ -35,6 +35,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 verificarUsuario();
+                startActivity(new Intent(Login.this,Register.class));
             }
 
 

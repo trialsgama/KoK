@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity {
         mail = (EditText) findViewById(R.id.Mail);
         fec = (EditText) findViewById(R.id.Nac);
         password = (EditText) findViewById(R.id.password);
-        btn_registro = (Button) findViewById(R.id.btn_registrarse);
+        btn_registro = (Button) findViewById(R.id.btn_register);
 
         btn_registro.setOnClickListener(new View.OnClickListener() {
             @Override
