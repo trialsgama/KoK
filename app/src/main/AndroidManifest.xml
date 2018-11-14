@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="reyes.de.rey.app_nativa_am">
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,9 +27,8 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-             </intent-filter>
-         </activity>
-
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activities.menuusuarioListActivity"
             android:label="@string/title_menuusuario_list"
@@ -50,10 +49,12 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="reyes.de.rey.app_nativa_am.Activities.menuusuarioListActivity" />
         </activity>
-
+        <activity android:name=".Activities.Momentos_activity"></activity>
     </application>
+
 </manifest>
