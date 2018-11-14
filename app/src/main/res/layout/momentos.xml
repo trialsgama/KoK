@@ -11,19 +11,17 @@
         android:layout_width="218dp"
         android:layout_height="175dp"
         android:contentDescription="TODO"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="41dp" />
-
-
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
     <Button
         android:id="@+id/galeria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="248dp" />
+        android:text="Galeria"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="208dp" />
 
     <EditText
         android:id="@+id/editText"
@@ -31,16 +29,16 @@
         android:layout_height="130dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="318dp" />
+        android:hint="Ingrese descripcion o nota"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="271dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cargar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="484dp" />
+        android:text="Cargar"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="424dp" />
 
 </android.support.constraint.ConstraintLayout>

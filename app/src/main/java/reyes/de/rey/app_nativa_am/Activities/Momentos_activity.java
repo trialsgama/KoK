@@ -1,6 +1,7 @@
 package reyes.de.rey.app_nativa_am.Activities;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,16 +21,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import reyes.de.rey.app_nativa_am.R;
+import reyes.de.rey.app_nativa_am.SQLite.Conexion_Sqlite;
 
 public class Momentos_activity extends AppCompatActivity {
 
     private static final int PICK_IMAGE = 100;
     Uri imageUri;
     ImageView foto_gallery;
-    Button boton_galeria;
+    Button boton_galeria,boton_cargar;
     public TextView tvLatitud, tvLongitud, tvAltura, tvPrecision;
     private LocationManager locManager;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd",Locale.getDefault());
+    Date date = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +46,15 @@ public class Momentos_activity extends AppCompatActivity {
 
         foto_gallery = (ImageView)findViewById(R.id.foto_gallery);
         boton_galeria = (Button)findViewById(R.id.galeria);
+        boton_cargar = (Button)findViewById(R.id.cargar);
        // tvLatitud = (TextView);
        // tvLongitud = (TextView)findViewById(R.id.tvLongitud);
        // tvAltura = (TextView)findViewById(R.id.tvAltura);
         //tvPrecision = (TextView)findViewById(R.id.tvPrecision);
+
         locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        String fecha = dateFormat.format(date);
+
 
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
@@ -72,6 +84,14 @@ public class Momentos_activity extends AppCompatActivity {
                 openGallery();
             }
         });
+
+        boton_cargar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    cargarMomento();
+            }
+        });
+
     }
 
     private void openGallery(){
@@ -85,6 +105,13 @@ public class Momentos_activity extends AppCompatActivity {
             imageUri = data.getData();
             foto_gallery.setImageURI(imageUri);
         }
+    }
+
+    private void cargarMomento() {
+        Conexion_Sqlite conn = new Conexion_Sqlite(this,"bd_momentos",null,1);
+        SQLiteDatabase db = conn.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
     }
 }
 
